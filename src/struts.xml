@@ -1,0 +1,15 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">  
+<!-- DTD=document type definition -->
+
+<struts>
+	<package name="default" extends="hibernate-default">
+		<action name="addTweet" method="add" class="com.vaannila.web.TweetAction">
+			<result name="success" type="redirect">listTweet</result>
+		</action>
+		<action name="listTweet" method="list" class="com.vaannila.web.TweetAction">
+			<result name="success">/register.jsp</result>
+		</action>
+	</package>
+</struts>
